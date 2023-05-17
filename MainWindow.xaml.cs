@@ -36,7 +36,7 @@ namespace Client
 
         private void Create_chat_BTN_Click(object sender, RoutedEventArgs e)
         {
-            Window mainForm = new Window1();
+            Window1 mainForm = new Window1(UserName.Text);
             mainForm.Show();
             this.Close();
         }
@@ -75,6 +75,7 @@ namespace Client
         private void predlojeniya_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             UserName.Text = predlojeniya.SelectedItem.ToString();
+            IP.Text = "127.0.0.1";
         }
     }
 }
