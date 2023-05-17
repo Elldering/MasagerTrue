@@ -1,0 +1,57 @@
+﻿<Window x:Class="Client.Window1"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800" Background="#FF144D53" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="175*"/>
+            <RowDefinition Height="170*"/>
+            <RowDefinition Height="48*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="148*"/>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="435*"/>
+            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="95*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas Grid.RowSpan="4" Grid.ColumnSpan="2" Background="#FF1A3C40" SnapsToDevicePixels="True" ClipToBounds="True">
+
+
+
+
+        </Canvas>
+        <ListBox x:Name="AllMessage" Grid.Row="1" Grid.Column="2" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="2" Foreground="#FFE4EDDB" Margin="10,0,10,10" RenderTransformOrigin="0.268,0.509" Grid.ColumnSpan="2"/>
+
+        <ListBox x:Name="AllUsers" Grid.Row="1"  d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="3" Foreground="#FF6AA4A0" FontSize="18" Grid.ColumnSpan="2"/>
+        <Button x:Name="logs_BTN" Content="logs" Grid.Row="0" Grid.Column="1" Background="#FF307672" BorderBrush="#FF1A3C40" Margin="5,5,5,5" FontSize="16" RenderTransformOrigin="0.5,0.5" Click="logs_BTN_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="seeusers" Content="Пользователи" Background="#FF307672" BorderBrush="#FF1A3C40" Margin="4,5,5,5" FontSize="16" RenderTransformOrigin="0.5,0.5" Click="seeusers_Click" />
+        <Button Content="Сообщения" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Background="#FFE4EDDB" BorderBrush="#FFDAE4C0" Margin="10,5,10,5" FontSize="16" RenderTransformOrigin="0.5,0.5" Foreground="#DD8A8A8A"/>
+        <TextBox x:Name="Massage_TextBox" Grid.Row="3" Grid.Column="2"  TextWrapping="Wrap" Text="TextBox" Background="#FF307672" CaretBrush="#FF5A5F59" SelectionBrush="#FFB9D8B2" Foreground="#FFD1D4B8" Margin="10,7,10,6" Padding="7,4,0,4" FontSize="18"/>
+        <Button x:Name="send_BTN" Content="" Grid.Row="3" Grid.Column="3" BorderBrush="#331A3C40" Margin="0,8,0,8" FontSize="16" RenderTransformOrigin="0.5,0.5" Click="send_BTN_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/send.png" TileMode="None" Stretch="Uniform"/>
+            </Button.Background>
+            <Button.RenderTransform>
+                <TransformGroup/>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="out_BTN" Content="Выйти" Background="#FF307672" BorderBrush="#FF1A3C40" Margin="0,5,5,5" FontSize="16" RenderTransformOrigin="0.5,0.5" Grid.Column="4" Click="out_BTN_Click">
+            <Button.RenderTransform>
+                <TransformGroup/>
+            </Button.RenderTransform>
+        </Button>
+    </Grid>
+</Window>
